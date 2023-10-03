@@ -13,12 +13,22 @@ body {
     display: grid;
     gap: 20px;
     grid-template-columns: 200px auto 100px;
+    grid-template-areas: 
+    "A A A A  A A A A  A A A A"
+    "B B B B  B B B B  B B C C"
+    "B B B B  B B B B  B B C C";
 }
 [class^="box-"] {
     background-color: skyblue;
     display: grid;
     place-items: center;
 }
-.container {
-    
+.box-1 {
+    grid-area: A;
+    }
+.box-2 {
+    grid-area: B;
 }
+.box-3 {
+    grid-area: C;
+}    
